@@ -1,10 +1,10 @@
 package controleHorario;
 
 public class Hora {
-	private int hora, minutos, segundos;
+	private int hora, minutos;
 	
 	
-	public Hora(int hora, int minutos, int segundos){
+	public Hora(int hora, int minutos){
 		if(hora>=0 && hora<24){
 			this.hora = hora;
 		} else{
@@ -15,18 +15,13 @@ public class Hora {
 			this.minutos = minutos;
 		} else{
 			throw new IllegalArgumentException("Minutos inválidos");
-		}
+		}		
 		
-		if(segundos>=0 && segundos<60){
-			this.segundos = segundos;
-		} else{
-			throw new IllegalArgumentException("Segundos inválidos");
-		}
 	}
 
 	
 	public String toString(){
-	     return String.format("%d:%d:%d", getHora(), getMinutos(), getSegundos());
+	     return String.format("%d:%d", getHora(), getMinutos());
 	    }
 	
 
@@ -37,12 +32,4 @@ public class Hora {
 	public int getMinutos() {
 		return minutos;
 	}
-
-	public int getSegundos() {
-		return segundos;
-	}
-
-	
-	
-	
 }
