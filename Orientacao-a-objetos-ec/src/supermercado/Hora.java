@@ -14,6 +14,14 @@ public class Hora {
 				this.minutos = minutos;
 			} else{
 				throw new IllegalArgumentException("Minutos inválidos");
-			}		
+			}	
+			
+			
 	}
+
+	public int getHora() {
+		return hora;
+	}
+
+	
 }
